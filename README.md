@@ -80,3 +80,30 @@ Secret Key: Teacher2026
 
 > Note: This key is required to enable admin privileges. Regular users do not need this key.
 
+
+
+
+
+
+## Screenshots
+
+### Home Page
+![Home](screenshots/home.png)
+
+### Login Page
+![Login](screenshots/login.png)
+
+### Student Dashboard Page
+![Dashboard](screenshots/studentdashboard.png)
+
+### Quiz Page
+![Quiz](screenshots/quizpage.png)
+
+### Quiz Module Page
+![Quiz](screenshots/quizmodule.png)
+
+### Quiz Result Page
+![Quiz](screenshots/quizresult.png) 
+
+### Admin Dashboard Page
+![Dashboard](screenshots/admindashboard.png)
