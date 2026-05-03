@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>All Courses - Smart Learn</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" href="imgs/favicon.png" type="image/png">
+</head>
+<body>
+
+    <nav class="navbar dashboard-nav">
+        <div class="logo">
+            <a href="index.html"><img src="imgs/logo.jpg" alt="Smart Learn Logo"></a>
+        </div>
+        <ul class="nav-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="courses.html" class="active">Course</a></li>
+            
+            <li class="dropdown-parent">
+                <a href="#">Notes <i class="fas fa-chevron-down"></i></a>
+                <ul class="dropdown-menu">
+                    <li class="dropdown-sub-parent">
+                        <a href="#">Information Technology <i class="fas fa-chevron-right arrow-right"></i></a>
+                        <ul class="submenu">
+                            <li><a href="#">1st Year</a></li>
+                            <li><a href="#">2nd Year</a></li>
+                            <li><a href="#">3rd Year</a></li>
+                            <li><a href="#">4th Year</a></li>
+                        </ul>
+                    </li>
+                    <li class="dropdown-sub-parent">
+                        <a href="#">Computer Engineering <i class="fas fa-chevron-right arrow-right"></i></a>
+                        <ul class="submenu">
+                            <li><a href="computer-eng-1st-year.html">1st Year</a></li>
+                            <li><a href="computer-eng-2nd-year.html">2nd Year</a></li>
+                            <li><a href="computer-eng-3rd-year.html">3rd Year</a></li>
+                            <li><a href="computer-eng-4th-year.html">4th Year</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </li>
+
+            <li class="dropdown-parent">
+                <a href="#">E-Book <i class="fas fa-chevron-down"></i></a>
+                <ul class="dropdown-menu">
+                    <li><a href="ebook-1st-year.html">1st Year E-Book</a></li>
+                    <li><a href="ebook-2nd-year.html">2nd Year E-Book</a></li>
+                    <li><a href="ebook-3rd-year.html">3rd Year E-Book</a></li>
+                    <li><a href="ebook-4th-year.html">4th Year E-Books</a></li>
+                </ul>
+            </li>
+
+            <li><a href="about.html">About US</a></li>
+            <li><a href="contact.html">Contact Us</a></li>
+            <li><a href="student-dashboard.html">Dashboard</a></li>
+        </ul>
+        
+        <div class="user-profile dropdown-parent">
+            <div class="profile-trigger">
+                <div class="avatar-circle">DL</div>
+                <span>Demo login <i class="fas fa-chevron-down"></i></span>
+            </div>
+            <ul class="dropdown-menu profile-dropdown">
+                <li class="profile-name-header">Demo login</li>
+                <li><a href="student-dashboard.html"><i class="fas fa-tachometer-alt"></i> Dashboard</a></li>
+                <li><a href="profile.html"><i class="fas fa-user"></i> My profile</a></li>
+                <li><a href="settings.html"><i class="fas fa-cog"></i> Account Settings</a></li>
+                <li><a href="index.html"><i class="fas fa-sign-out-alt"></i> Logout</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <header class="page-header courses-header">
+        <div class="header-content">
+            <span class="sub-heading">MY COURSES</span>
+            <h1>Education For The Real World</h1>
+        </div>
+    </header>
+
+    <section class="all-courses-page">
+        <div class="course-grid">
+            
+            <div class="course-card">
+                <div class="course-thumb">
+                    <img src="imgs\Courses Image\course-java.png" alt="Java" onerror="this.src='logo.png'">
+                </div>
+                <div class="course-body">
+                    <div class="course-rating">
+                        <div class="stars">
+                            <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="far fa-star"></i>
+                        </div>
+                    </div>
+                    <h3 class="course-title">Advance Java Programming</h3>
+                    <button class="btn-enroll" onclick="enrollStudent(this)">Enroll Course</button>
+                </div>
+            </div>
+
+            <div class="course-card">
+                <div class="course-thumb">
+                    <img src="imgs\Courses Image\course-soa.png" alt="SOA" onerror="this.src='logo.png'">
+                </div>
+                <div class="course-body">
+                    <div class="course-rating">
+                        <div class="stars">
+                            <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+                        </div>
+                        <span class="rating-num">5.00 (1)</span>
+                    </div>
+                    <h3 class="course-title">Service Oriented Architecture</h3>
+                    <button class="btn-enroll" onclick="enrollStudent(this)">Enroll Course</button>
+                </div>
+            </div>
+
+            <div class="course-card">
+                <div class="course-thumb">
+                    <img src="imgs\Courses Image\course-se.png" alt="SE" onerror="this.src='logo.png'">
+                </div>
+                <div class="course-body">
+                    <div class="course-rating">
+                        <div class="stars">
+                            <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+                        </div>
+                        <span class="rating-num">5.00 (1)</span>
+                    </div>
+                    <h3 class="course-title">Software Engineering</h3>
+                    <button class="btn-enroll" onclick="enrollStudent(this)">Enroll Course</button>
+                </div>
+            </div>
+
+            <div class="course-card">
+                <div class="course-thumb">
+                    <img src="imgs\Courses Image\course-dsa.png" alt="DSA" onerror="this.src='logo.png'">
+                </div>
+                <div class="course-body">
+                    <div class="course-rating">
+                        <div class="stars">
+                            <i class="far fa-star"></i><i class="far fa-star"></i><i class="far fa-star"></i><i class="far fa-star"></i><i class="far fa-star"></i>
+                        </div>
+                    </div>
+                    <h3 class="course-title">Data Structure and Algorithm</h3>
+                    <button class="btn-enroll">Enroll Course</button>
+                </div>
+            </div>
+
+            <div class="course-card">
+                <div class="course-thumb">
+                    <img src="imgs\Courses Image\course-dbms.png" alt="DBMS" onerror="this.src='logo.png'">
+                </div>
+                <div class="course-body">
+                    <div class="course-rating">
+                        <div class="stars">
+                            <i class="far fa-star"></i><i class="far fa-star"></i><i class="far fa-star"></i><i class="far fa-star"></i><i class="far fa-star"></i>
+                        </div>
+                    </div>
+                    <h3 class="course-title">Database Managment System</h3>
+                    <button class="btn-enroll">Enroll Course</button>
+                </div>
+            </div>
+
+            <div class="course-card">
+                <div class="course-thumb">
+                    <img src="imgs\Courses Image\course-de.png" alt="DE" onerror="this.src='logo.png'">
+                </div>
+                <div class="course-body">
+                    <div class="course-rating">
+                        <div class="stars">
+                            <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="far fa-star"></i>
+                        </div>
+                        <span class="rating-num">3.00 (1)</span>
+                    </div>
+                    <h3 class="course-title">Digital Electronics</h3>
+                    <button class="btn-enroll">Enroll Course</button>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="footer-col"><img src="imgs/1.png" class="footer-logo"><p class="slogan">Learning often happens in<br> classrooms <br> but it doesn't have to.</p></div>
+        <div class="footer-col"><h4>Popular Contain</h4><ul><li><a href="index.html">Home</a></li><li><a href="courses.html">Course</a></li><li><a href="student-dashboard.html">Dashboard</a></li><li><a href="contact.html">Contact Us</a></li><li><a href="about.html">About Us</a></li></ul></div>
+        <div class="footer-col"><h4>Contact Info</h4><p>0123456789</p><p>smartlearnhelp@gmail.com</p></div>
+    </footer>
+
+    <script>
+    function enrollStudent(button) {
+        // 1. Change the text
+        button.innerText = "Enrolled Successfully!";
+        
+        // 2. Change the style to look 'disabled' or 'active'
+        button.style.backgroundColor = "#22c55e"; // Green color
+        button.style.color = "white";
+        button.style.border = "none";
+        
+        // 3. Disable the button so they can't click it again
+        button.disabled = true;
+        button.style.cursor = "default";
+        
+        // Optional: Show a popup alert
+        alert("Congratulations! You have enrolled in this course.");
+    }
+</script>
+
+</body>
+</html>

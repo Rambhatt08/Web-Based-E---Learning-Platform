@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Settings - Smart Learn</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" href="imgs/favicon.png" type="image/png">
+</head>
+<body>
+
+    <nav class="navbar dashboard-nav">
+    <div class="logo">
+        <a href="index.html"><img src="imgs/logo.jpg" alt="Smart Learn Logo"></a>
+    </div>
+    
+    <ul class="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="#">Course</a></li>
+        
+        <li class="dropdown-parent">
+            <a href="#">Notes <i class="fas fa-chevron-down"></i></a>
+            
+            <ul class="dropdown-menu">
+                <li class="dropdown-sub-parent">
+                    <a href="#">Information Technology <i class="fas fa-chevron-right arrow-right"></i></a>
+                    <ul class="submenu">
+                        <li><a href="#">1st Year</a></li>
+                        <li><a href="#">2nd Year</a></li>
+                        <li><a href="#">3rd Year</a></li>
+                        <li><a href="#">4th Year</a></li>
+                    </ul>
+                </li>
+
+                <li class="dropdown-sub-parent">
+                    <a href="#">Computer Engineering <i class="fas fa-chevron-right arrow-right"></i></a>
+                    <ul class="submenu">
+                        <li><a href="computer-eng-1st-year.html">1st Year</a></li>
+                        <li><a href="computer-eng-2nd-year.html">2nd Year</a></li>
+                        <li><a href="computer-eng-3rd-year.html">3rd Year</a></li>
+                        <li><a href="computer-eng-4th-year.html">4th Year</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </li>
+
+        <li class="dropdown-parent">
+            <a href="#">E-Book <i class="fas fa-chevron-down"></i></a>
+            <ul class="dropdown-menu">
+                <li><a href="ebook-1st-year.html">1st Year E-Book</a></li>
+                <li><a href="ebook-2nd-year.html">2nd Year E-Book</a></li>
+                <li><a href="ebook-3rd-year.html">3rd Year E-Book</a></li>
+                <li><a href="ebook-4th-year.html">4th Year E-Books</a></li>
+            </ul>
+        </li>
+
+        <li><a href="about.html">About US</a></li>
+        <li><a href="contact.html">Contact Us</a></li>
+        <li><a href="student-dashboard.html" class="active">Dashboard</a></li>
+    </ul>
+    
+    <div class="user-profile dropdown-parent">
+        <div class="profile-trigger">
+            <div class="avatar-circle">DL</div>
+            <span>Demo login <i class="fas fa-chevron-down"></i></span>
+        </div>
+        <ul class="dropdown-menu profile-dropdown">
+            <li class="profile-name-header">Demo login</li>
+            <li><a href="student-dashboard.html"><i class="fas fa-tachometer-alt"></i> Dashboard</a></li>
+            <li><a href="profile.html"><i class="fas fa-user"></i> My profile</a></li>
+            <li><a href="settings.html"><i class="fas fa-cog"></i> Account Settings</a></li>
+            <li><a href="index.html"><i class="fas fa-sign-out-alt"></i> Logout</a></li>
+        </ul>
+    </div>
+</nav>  
+
+    <header class="dash-header">
+        <div class="big-avatar">DL</div>
+        <div class="welcome-text">
+            <span>Hello,</span>
+            <h2>Demo Login</h2>
+        </div>
+    </header>
+
+    <div class="dashboard-container">
+        
+        <aside class="sidebar">
+            <ul>
+                <li><a href="student-dashboard.html"><i class="fas fa-tachometer-alt"></i> Dashboard</a></li>
+                <li><a href="profile.html"><i class="fas fa-user"></i> My Profile</a></li>
+                <li><a href="enrolled-courses.html"><i class="fas fa-graduation-cap"></i> Enrolled Courses</a></li>
+                <li><a href="reviews.html"><i class="fas fa-star"></i> Reviews</a></li>
+                <li><a href="quiz-attempts.html"><i class="fas fa-chart-bar"></i> My Quiz Attempts</a></li>
+                <li><a href="wishlist.html"><i class="fas fa-bookmark"></i> Wishlist</a></li>
+                <li><a href="order-history.html"><i class="fas fa-shopping-cart"></i> Order History</a></li>
+                <li><a href="question-answer.html"><i class="fas fa-question-circle"></i> Question & Answer</a></li>
+                <li><a href="settings.html" class="active"><i class="fas fa-cog"></i> Settings</a></li>
+                <li><a href="index.html"><i class="fas fa-sign-out-alt"></i> Logout</a></li>
+            </ul>
+        </aside>
+
+        <main class="dash-content">
+            <h3 class="page-title">Settings</h3>
+
+            <div class="tabs-header">
+                <div class="tabs-nav">
+                    <button class="tab-btn active" onclick="openTab(event, 'profile')">Profile</button>
+                    <button class="tab-btn" onclick="openTab(event, 'password')">Password</button>
+                    <button class="tab-btn" onclick="openTab(event, 'social')">Social Profile</button>
+                </div>
+            </div>
+
+            <div id="profile" class="tab-content" style="display: block;">
+                
+                <div class="settings-cover-area">
+                    <div class="cover-photo">
+                <div class="cover-actions">
+                    <button class="btn-action btn-upload" type="button">
+                        <i class="fas fa-camera"></i> Upload Cover Photo
+                    </button>
+                     <button class="btn-action btn-delete" type="button" title="Delete Cover Photo">
+                        <i class="fas fa-trash"></i>
+                    </button>
+                </div>
+            </div>
+                    <div class="profile-photo-edit">
+                        <div class="circle-placeholder"><i class="fas fa-user"></i></div>
+                        <button class="btn-camera-small"><i class="fas fa-camera"></i></button>
+                    </div>
+                </div>
+
+                <div class="info-text">
+                    <small>Profile Photo Size: <strong>200x200</strong> pixels &nbsp; Cover Photo Size: <strong>700x430</strong> pixels</small>
+                </div>
+
+                <form class="settings-form">
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label>First Name</label>
+                            <input type="text" value="demo" class="input-field">
+                        </div>
+                        <div class="form-group">
+                            <label>Last Name</label>
+                            <input type="text" value="login" class="input-field">
+                        </div>
+                    </div>
+
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label>User Name</label>
+                            <input type="text" value="demologin" class="input-field readonly" readonly>
+                        </div>
+                        <div class="form-group">
+                            <label>Phone Number</label>
+                            <input type="text" placeholder="Phone Number" class="input-field">
+                        </div>
+                    </div>
+
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label>Skill/Occupation</label>
+                            <input type="text" value="UX Designer" class="input-field">
+                        </div>
+                        <div class="form-group">
+                            <label>Timezone</label>
+                            <select class="input-field">
+                                <option>Asia/Calcutta</option>
+                                <option>America/New_York</option>
+                                <option>Europe/London</option>
+                            </select>
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label>Bio</label>
+                        <div class="rich-text-editor">
+                            <div class="toolbar">
+                                <i class="fas fa-bold"></i>
+                                <i class="fas fa-italic"></i>
+                                <i class="fas fa-underline"></i>
+                                <i class="fas fa-list-ul"></i>
+                                <i class="fas fa-align-left"></i>
+                                <i class="fas fa-link"></i>
+                            </div>
+                            <textarea rows="5"></textarea>
+                        </div>
+                    </div>
+
+                 <div class="form-group">
+                    <label>Display name publicly as</label>
+                    <select class="input-field">
+                        <option>demo login</option>
+                        <option>demologin</option>
+                        <option>demo</option>
+            </select>
+                    <small class="form-helper-text">The display name is shown in all public fields, such as the author name, instructor name, student name, and name that will be printed on the certificate.</small>
+            </div>
+
+                    <button type="button" class="btn-update">Update Profile</button>
+                </form>
+            </div>
+
+            <div id="password" class="tab-content" style="display: none;">
+                <form class="settings-form">
+                    <div class="form-group">
+                        <label>Current Password</label>
+                        <input type="password" placeholder="Current Password" class="input-field">
+                    </div>
+                    <div class="form-group">
+                        <label>New Password</label>
+                        <input type="password" placeholder="Type Password" class="input-field">
+                    </div>
+                    <div class="form-group">
+                        <label>Re-type New Password</label>
+                        <input type="password" placeholder="Type Password" class="input-field">
+                    </div>
+                    <button type="button" class="btn-update">Reset Password</button>
+                </form>
+            </div>
+
+            <div id="social" class="tab-content" style="display: none;">
+                <form class="settings-form">
+                    <p class="social-label">Social Profile Link</p>
+
+                    <div class="social-row">
+                        <div class="social-icon"><i class="fab fa-facebook-f"></i> Facebook</div>
+                        <input type="text" placeholder="https://facebook.com/username" class="input-field">
+                    </div>
+
+                    <div class="social-row">
+                        <div class="social-icon"><i class="fab fa-twitter"></i> X</div>
+                        <input type="text" placeholder="https://x.com/username" class="input-field">
+                    </div>
+
+                    <div class="social-row">
+                        <div class="social-icon"><i class="fab fa-linkedin-in"></i> Linkedin</div>
+                        <input type="text" placeholder="https://linkedin.com/username" class="input-field">
+                    </div>
+
+                    <div class="social-row">
+                        <div class="social-icon"><i class="fas fa-globe"></i> Website</div>
+                        <input type="text" placeholder="https://example.com/" class="input-field">
+                    </div>
+
+                    <div class="social-row">
+                        <div class="social-icon"><i class="fab fa-github"></i> Github</div>
+                        <input type="text" placeholder="https://github.com/username" class="input-field">
+                    </div>
+
+                    <button type="button" class="btn-update">Update Profile</button>
+                </form>
+            </div>
+
+        </main>
+    </div>
+
+    <footer class="footer">
+        <div class="footer-col"><img src="imgs/1.png" class="footer-logo"><p class="slogan">Learning often happens in<br> classrooms <br> but it doesn't have to.</p></div>
+        <div class="footer-col"><h4>Popular Contain</h4><ul><li><a href="index.html">Home</a></li><li><a href="courses.html">Course</a></li><li><a href="student-dashboard.html">Dashboard</a></li><li><a href="contact.html">Contact Us</a></li></ul></div>
+        <div class="footer-col"><h4>Contact Info</h4><p>0123456789</p><p>smartlearnhelp@gmail.com</p></div>
+    </footer>
+
+    <script>
+        function openTab(evt, tabName) {
+            var i, tabcontent, tablinks;
+            tabcontent = document.getElementsByClassName("tab-content");
+            for (i = 0; i < tabcontent.length; i++) { tabcontent[i].style.display = "none"; }
+            tablinks = document.getElementsByClassName("tab-btn");
+            for (i = 0; i < tablinks.length; i++) { tablinks[i].className = tablinks[i].className.replace(" active", ""); }
+            document.getElementById(tabName).style.display = "block";
+            evt.currentTarget.className += " active";
+        }
+    </script>
+</body>
+</html>

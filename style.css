@@ -1,0 +1,1795 @@
+/* GENERAL RESET & FONTS */
+:root {
+    --primary-blue: #1d4ed8; /* Dark Blue */
+    --accent-blue: #2563eb; /* Bright Blue */
+    --bg-purple: #8b5cf6;
+    --text-dark: #1e293b;
+    --text-light: #64748b;
+    --white: #ffffff;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    background-color: #f8fafc;
+    color: var(--text-dark);
+    overflow-x: hidden;
+}
+
+a { text-decoration: none; color: inherit; }
+ul { list-style: none; }
+
+/* NAVBAR */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 5%;
+    background: var(--white);
+}
+
+.logo img {
+    height: 80px;      /* change this value as needed */
+    width: auto;       /* keeps aspect ratio */
+}
+
+
+.nav-links {
+    display: flex;
+    gap: 30px;
+}
+
+.nav-links a {
+    color: #555;
+    font-size: 14px;
+    font-weight: 500;
+}
+
+.nav-links a.active {
+    color: var(--primary-blue);
+    border-bottom: 2px solid var(--primary-blue);
+    padding-bottom: 5px;
+}
+.nav-links a {
+    position: relative;
+    padding-bottom: 5px;
+    transition: color 0.3s ease;
+}
+
+.nav-links a::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 0;
+    height: 2px;
+    background-color: var(--primary-blue);
+    transition: width 0.3s ease;
+}
+
+.nav-links a:hover,
+.nav-links a.active {
+    color: var(--primary-blue);
+}
+
+.nav-links a:hover::after,
+.nav-links a.active::after {
+    width: 100%;
+}
+
+
+/* HERO SECTION */
+.hero {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 40px 5%;
+    min-height: 80vh;
+}
+
+.hero-content {
+    max-width: 50%;
+}
+
+.subtitle {
+    font-size: 14px;
+    letter-spacing: 2px;
+    color: #555;
+    margin-bottom: 10px;
+    display: block;
+}
+
+.hero h1 {
+    font-size: 3.5rem;
+    line-height: 1.2;
+    color: #0b0b45; /* Dark Navy */
+    margin-bottom: 30px;
+}
+
+.btn-outline {
+    border: 1px solid var(--primary-blue);
+    color: var(--primary-blue);
+    padding: 12px 30px;
+    border-radius: 30px;
+    font-weight: 500;
+    display: inline-block;
+}
+
+.hero-image-container {
+    position: relative;
+    width: 45%;
+    display: flex;
+    justify-content: center;
+}
+
+.purple-bg {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 80%;
+    height: 100%;
+    background-color: #7c3aed; /* Purple */
+    border-radius: 20px;
+    z-index: -1;
+}
+
+.main-hero-img {
+    max-width: 90%;
+    border-radius: 0 0 20px 20px;
+}
+
+/* Floating cards simulation */
+.float-card {
+    position: absolute;
+    background: white;
+    padding: 10px 15px;
+    border-radius: 12px;
+    box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 12px;
+}
+
+.card-1 { bottom: 30px; left: -20px; }
+.card-2 { top: 50%; right: -20px; }
+
+/* CATEGORIES */
+.categories {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    padding: 40px 5%;
+    flex-wrap: wrap;
+    margin-top: -50px; /* Overlap effect if desired */
+}
+
+.category-card {
+    background: white;
+    padding: 30px;
+    border-radius: 15px;
+    width: 200px;
+    text-align: center;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+}
+
+.category-card img { height: 60px; margin-bottom: 15px; }
+.category-card h3 { font-size: 16px; color: #0b0b45; }
+
+/* FEATURED COURSES */
+.featured {
+    padding: 60px 5%;
+    text-align: center;
+}
+
+.section-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 40px;
+}
+
+.section-header h2 { font-size: 2rem; color: #333; }
+
+.filter-btn {
+    background: white;
+    border: 1px solid #ddd;
+    padding: 8px 20px;
+    border-radius: 20px;
+    color: var(--primary-blue);
+    cursor: pointer;
+}
+
+.course-grid {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+}
+
+.course-card {
+    background: white;
+    border-radius: 15px;
+    overflow: hidden;
+    width: 30%;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+    text-align: left;
+}
+
+.course-img-wrapper {
+    height: 180px;
+    background: #eef2ff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.course-img-wrapper img { max-width: 100%; max-height: 100%; }
+
+.course-info { padding: 20px; }
+.course-info h3 { font-size: 1.1rem; margin: 10px 0 20px 0; min-height: 50px; }
+.stars { color: #fbbf24; font-size: 14px; }
+
+.btn-course {
+    width: 100%;
+    padding: 10px;
+    background: transparent;
+    border: 1px solid var(--primary-blue);
+    color: var(--primary-blue);
+    border-radius: 5px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.btn-course:hover { background: var(--primary-blue); color: white; }
+.discover-more { text-align: right; margin-top: 10px; font-size: 14px; color: #666; }
+
+/* LEARNING LEVELS */
+.levels-section {
+    padding: 60px 5%;
+    text-align: center;
+}
+.levels-section h2 { font-size: 2rem; color: #0b0b45; }
+.section-sub { margin-bottom: 50px; color: #666; }
+
+.levels-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 40px;
+    text-align: left;
+}
+
+.level-item {
+    display: flex;
+    align-items: flex-start;
+    gap: 20px;
+}
+
+.level-icon { width: 50px; height: 50px; } /* Replace with actual icons */
+
+/* STATS */
+.stats-section {
+    background: #f1f5f9;
+    padding: 60px 5%;
+    text-align: center;
+}
+
+.stats-container {
+    display: flex;
+    justify-content: space-around;
+    margin-top: 50px;
+}
+
+.stat-box img { height: 50px; margin-bottom: 10px; }
+.stat-box h3 { font-size: 1.8rem; color: #0b0b45; }
+.stat-box p { color: #666; }
+
+/* SUBSCRIPTION */
+.newsletter {
+    padding: 40px 5%;
+}
+
+.newsletter-bg {
+    position: relative;
+    border-radius: 20px;
+    overflow: hidden;
+    height: 300px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.bg-img {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: 1;
+}
+
+.newsletter-content {
+    position: relative;
+    z-index: 2;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 90%;
+}
+
+.newsletter-content h2 {
+    color: #0b0b45;
+    font-size: 1.8rem;
+}
+
+.subscribe-form {
+    background: white;
+    padding: 5px;
+    border-radius: 50px;
+    display: flex;
+    width: 400px;
+}
+
+.subscribe-form input {
+    border: none;
+    outline: none;
+    padding: 15px 20px;
+    flex: 1;
+    border-radius: 50px;
+}
+
+.subscribe-form button {
+    background: #1d4ed8;
+    color: white;
+    border: none;
+    padding: 10px 30px;
+    border-radius: 50px;
+    font-weight: 600;
+    cursor: pointer;
+}
+
+/* FOOTER */
+.footer {
+    background: #161b2e; /* Dark Navy/Black */
+    color: white;
+    padding: 60px 5%;
+    display: flex;
+    justify-content: space-between;
+}
+
+.footer-logo {
+    height: 80px;     /* adjust as needed */
+    width: auto;      /* keeps aspect ratio */
+    margin-bottom: 15px;
+}
+
+
+.footer-col h4 { margin-bottom: 20px; font-weight: 600; }
+.footer-col ul li { margin-bottom: 10px; }
+.footer-col a { color: #ccc; font-size: 14px; }
+.slogan { margin-top: 20px; font-size: 14px; line-height: 1.6; }
+
+/* --- ABOUT PAGE STYLES --- */
+
+/* Page Header (Purple Banner) */
+.page-header {
+    background-color: #7c3aed; /* Purple */
+    background-image: repeating-linear-gradient(
+        45deg,
+        rgba(255,255,255,0.05) 0px,
+        rgba(255,255,255,0.05) 1px,
+        transparent 1px,
+        transparent 10px
+    ); /* Creates the subtle wavy/line texture effect */
+    height: 300px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: white;
+    padding: 0 20px;
+}
+
+.header-content h1 {
+    font-size: 3rem;
+    font-weight: 700;
+    margin-bottom: 15px;
+}
+
+.header-content p {
+    font-size: 1.1rem;
+    max-width: 600px;
+    margin: 0 auto;
+    opacity: 0.9;
+}
+
+/* About Content Section (Image + Text) */
+.about-content {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 80px 10%;
+    gap: 60px;
+    background: white;
+}
+
+.about-image {
+    flex: 1;
+}
+
+.about-image img {
+    width: 100%;
+    border-radius: 20px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+}
+
+.about-text {
+    flex: 1;
+}
+
+.text-block {
+    margin-bottom: 40px;
+}
+
+.text-block h2 {
+    color: #0b0b45; /* Dark Navy */
+    font-size: 2rem;
+    margin-bottom: 20px;
+    font-weight: 700;
+}
+
+.text-block p {
+    color: #555;
+    line-height: 1.8;
+    font-size: 0.95rem;
+    text-align: justify;
+}
+/* --- CONTACT PAGE STYLES --- */
+
+.contact-section {
+    padding: 60px 10%;
+    background: white;
+}
+
+.section-title {
+    font-size: 2.5rem;
+    color: #0b0b45; /* Dark Navy */
+    margin-bottom: 50px;
+    line-height: 1.3;
+}
+
+.contact-container {
+    display: flex;
+    justify-content: space-between;
+    gap: 80px;
+}
+
+/* Form Styles */
+.contact-form {
+    flex: 2; /* Takes up more space */
+}
+
+.form-group {
+    margin-bottom: 25px;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: 600;
+    color: #333;
+    font-size: 14px;
+}
+
+.form-group input, 
+.form-group textarea {
+    width: 100%;
+    padding: 15px;
+    border: 1px solid #cbd5e1;
+    border-radius: 8px;
+    outline: none;
+    font-size: 14px;
+    transition: 0.3s;
+}
+
+.form-group input:focus, 
+.form-group textarea:focus {
+    border-color: #2563eb; /* Blue focus color */
+    box-shadow: 0 0 5px rgba(37, 99, 235, 0.2);
+}
+
+.btn-submit {
+    background-color: #3b82f6; /* Bright Blue */
+    color: white;
+    padding: 15px 40px;
+    border: none;
+    border-radius: 8px;
+    font-size: 16px;
+    font-weight: 600;
+    cursor: pointer;
+    width: 100%; /* Makes button full width like image */
+    transition: 0.3s;
+}
+
+.btn-submit:hover {
+    background-color: #2563eb;
+}
+
+/* Contact Info Box (Right Side) */
+.contact-info-box {
+    flex: 1; /* Takes up less space */
+    padding-top: 20px;
+}
+
+.info-item {
+    margin-bottom: 50px;
+}
+
+.info-item h3 {
+    font-size: 1.5rem;
+    color: #0b0b45;
+    margin-bottom: 15px;
+}
+
+.info-item p {
+    font-size: 1.1rem;
+    color: #555;
+}
+/* --- DASHBOARD / LOGIN PAGE STYLES --- */
+
+/* Center the login card vertically and horizontally */
+.login-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 80vh; /* Takes up most of the screen height */
+    background-color: #ffffff;
+}
+
+/* The Card */
+.login-card {
+    background: white;
+    padding: 40px;
+    width: 450px;
+    border-radius: 10px;
+    box-shadow: 0 0 20px rgba(0,0,0,0.05); /* Subtle shadow like image */
+    border: 1px solid #f0f0f0;
+}
+
+.login-card h2 {
+    font-size: 1.5rem;
+    color: #333;
+    margin-bottom: 30px;
+    font-weight: 500;
+}
+
+/* Inputs */
+.input-field {
+    width: 100%;
+    padding: 12px 15px;
+    margin-bottom: 20px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-size: 14px;
+    outline: none;
+    color: #555;
+}
+
+.input-field:focus {
+    border-color: #3b82f6;
+}
+
+/* Humanity Math Check */
+.humanity-check {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 20px;
+    font-size: 14px;
+    font-weight: 600;
+    color: #333;
+}
+
+.math-input {
+    width: 60px;
+    padding: 8px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    text-align: center;
+}
+
+/* Options (Checkbox + Forgot Password) */
+.form-options {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 25px;
+    font-size: 14px;
+    color: #555;
+}
+
+.forgot-pass {
+    color: #64748b;
+}
+
+/* Sign In Button */
+.btn-signin {
+    width: 100%;
+    padding: 12px;
+    background-color: #3b66f5; /* Matching the blue in image */
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.btn-signin:hover {
+    background-color: #2563eb;
+}
+
+/* Register Link */
+.register-link {
+    text-align: center;
+    margin-top: 20px;
+    font-size: 14px;
+    color: #555;
+}
+
+.register-link a {
+    color: #3b66f5;
+    text-decoration: none;
+}
+
+/* WhatsApp Floating Button */
+.whatsapp-float {
+    position: fixed;
+    width: 60px;
+    height: 60px;
+    bottom: 40px;
+    right: 40px;
+    background-color: #25d366;
+    color: white;
+    border-radius: 50px;
+    text-align: center;
+    font-size: 35px;
+    box-shadow: 2px 2px 3px #999;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 100;
+    transition: 0.3s;
+}
+
+.whatsapp-float:hover {
+    background-color: #20b957;
+    transform: scale(1.1);
+}
+
+/* --- FORGOT PASSWORD PAGE STYLES --- */
+
+.forgot-password-section {
+    padding: 60px 20%; /* Wide padding to center content like the image */
+    min-height: 50vh; /* Ensures footer stays down */
+    background: white;
+}
+
+.reset-container {
+    max-width: 600px;
+    margin: 0 auto; /* Centers the block if screen is very wide */
+}
+
+.reset-text {
+    font-size: 15px;
+    color: #555;
+    margin-bottom: 25px;
+    line-height: 1.6;
+}
+
+.reset-form label {
+    display: block;
+    font-weight: 600;
+    margin-bottom: 10px;
+    color: #0b0b45; /* Dark Navy */
+}
+
+/* Reusing .input-field from Dashboard, but ensuring it fits here */
+.reset-form .input-field {
+    width: 100%;
+    background-color: #ffffff;
+    border: 1px solid #e2e8f0;
+}
+
+.btn-reset {
+    background-color: #3b82f6; /* Bright Blue */
+    color: white;
+    padding: 12px 25px;
+    border: none;
+    border-radius: 5px;
+    font-size: 15px;
+    font-weight: 500;
+    cursor: pointer;
+    transition: 0.3s;
+    margin-top: 10px;
+}
+
+.btn-reset:hover {
+    background-color: #2563eb;
+}
+/* --- REGISTER PAGE STYLES --- */
+
+.register-section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh; /* Taller section for a longer form */
+    background-color: #f8fafc;
+    padding: 40px 0;
+}
+
+.register-card {
+    background: white;
+    padding: 40px;
+    width: 500px; /* Slightly wider than login card */
+    border-radius: 10px;
+    box-shadow: 0 0 15px rgba(0,0,0,0.05);
+    border: 1px solid #f0f0f0;
+}
+
+/* Reusing .form-group from Contact Page, but adding specific spacing for Register */
+.register-form .form-group {
+    margin-bottom: 20px;
+}
+
+.register-form label {
+    font-weight: 600;
+    color: #0b0b45; /* Dark Navy text for labels */
+    margin-bottom: 8px;
+    display: block;
+    font-size: 14px;
+}
+
+/* Ensure inputs are full width */
+.register-form .input-field {
+    width: 100%;
+}
+
+/* Adjust the checkbox area spacing */
+.register-form .form-options {
+    margin-top: -10px;
+    margin-bottom: 25px;
+}
+/* --- STUDENT DASHBOARD STYLES --- */
+
+/* User Profile in Navbar */
+.user-profile {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 14px;
+    color: #555;
+    cursor: pointer;
+}
+
+.avatar-circle {
+    width: 35px;
+    height: 35px;
+    background-color: #3b82f6; /* Blue */
+    color: white;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 14px;
+    font-weight: 600;
+}
+
+/* Dashboard Header (Welcome Section) */
+.dash-header {
+    display: flex;
+    align-items: center;
+    padding: 40px 10%;
+    background-color: #ffffff;
+    border-bottom: 1px solid #eee;
+    gap: 20px;
+}
+
+.big-avatar {
+    width: 80px;
+    height: 80px;
+    background-color: #3b82f6;
+    color: white;
+    font-size: 2rem;
+    font-weight: 600;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.welcome-text span {
+    color: #777;
+    font-size: 14px;
+}
+
+.welcome-text h2 {
+    color: #333;
+    font-size: 1.8rem;
+}
+
+/* Dashboard Container (Sidebar + Content) */
+.dashboard-container {
+    display: flex;
+    padding: 40px 10%;
+    gap: 40px;
+    min-height: 60vh;
+}
+
+/* Sidebar Styling */
+.sidebar {
+    width: 250px;
+    flex-shrink: 0;
+}
+
+.sidebar ul li {
+    margin-bottom: 5px;
+}
+
+.sidebar ul li a {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    padding: 12px 15px;
+    color: #555;
+    font-size: 15px;
+    border-radius: 5px;
+    transition: 0.3s;
+}
+
+.sidebar ul li a i {
+    width: 20px;
+    text-align: center;
+}
+
+/* Active State (Blue Background) */
+.sidebar ul li a.active, 
+.sidebar ul li a:hover {
+    background-color: #3b82f6;
+    color: white;
+}
+
+/* Main Content Styling */
+.dash-content {
+    flex-grow: 1;
+}
+
+.dash-content h3 {
+    font-size: 1.2rem;
+    margin-bottom: 20px;
+    color: #333;
+    font-weight: 500;
+}
+
+.stats-grid {
+    display: flex;
+    gap: 20px;
+}
+
+/* Stat Cards */
+.stat-card {
+    background: white;
+    border: 1px solid #eee;
+    padding: 40px 20px;
+    flex: 1; /* Equal width */
+    border-radius: 8px;
+    text-align: center;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.02);
+}
+
+.icon-box {
+    width: 50px;
+    height: 50px;
+    background-color: #eef2ff; /* Light Blue BG */
+    color: #3b82f6; /* Blue Icon */
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 20px;
+    margin: 0 auto 15px auto;
+}
+
+.stat-card h2 {
+    font-size: 2rem;
+    color: #333;
+    margin-bottom: 5px;
+}
+
+.stat-card p {
+    color: #777;
+    font-size: 14px;
+}
+/* --- NESTED DROPDOWN STYLES --- */
+
+/* 1. Reset standard relative positioning for the Nav Links */
+.nav-links li {
+    position: relative;
+    padding: 10px 0; /* Add touch target space */
+}
+
+/* 2. The Main Dropdown (Hidden by default) */
+.dropdown-menu {
+    position: absolute;
+    top: 100%; /* Appears directly below the link */
+    left: 0;
+    width: 260px; /* Wider to fit text like 'Information Technology' */
+    background: white;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+    border-radius: 8px;
+    padding: 10px 0;
+    display: none; /* Hides it */
+    z-index: 1000;
+}
+
+/* Show Dropdown on Hover */
+.dropdown-parent:hover .dropdown-menu {
+    display: block;
+}
+
+/* Dropdown Links Style */
+.dropdown-menu li {
+    padding: 0; /* Reset padding */
+}
+
+.dropdown-menu li a {
+    display: flex;
+    justify-content: space-between; /* Pushes the arrow to the right */
+    align-items: center;
+    padding: 12px 20px;
+    color: #333;
+    font-size: 14px;
+    transition: 0.2s;
+    white-space: nowrap; /* Prevents text wrapping */
+}
+
+.dropdown-menu li a:hover {
+    background-color: #f1f5f9;
+    color: #3b82f6; /* Brainspot Blue */
+}
+
+/* Small arrow for sub-menus */
+.arrow-right {
+    font-size: 10px;
+    color: #999;
+}
+
+/* 3. The Sub-Menu (Level 2) */
+.submenu {
+    position: absolute;
+    left: 100%; /* Push it to the right of the parent */
+    top: 0;     /* Align with the top of the parent item */
+    width: 150px;
+    background: white;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+    border-radius: 8px;
+    padding: 10px 0;
+    display: none; /* Hidden by default */
+}
+
+/* Show Submenu on Hover of the Parent Item */
+.dropdown-sub-parent:hover .submenu {
+    display: block;
+}
+/* --- USER PROFILE DROPDOWN STYLES --- */
+
+/* Make the profile container a relative parent for the dropdown */
+.user-profile {
+    position: relative;
+    height: 100%;
+    display: flex;
+    align-items: center;
+}
+
+/* The clickable area */
+.profile-trigger {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    cursor: pointer;
+}
+
+/* Specific styles for the Profile Dropdown */
+.profile-dropdown {
+    width: 200px;
+    right: 0;      /* Align to the right edge of the profile */
+    left: auto;    /* Override the default left alignment */
+    top: 100%;     /* Push it down slightly */
+}
+
+/* "Demo login" Header inside the dropdown */
+.profile-name-header {
+    padding: 15px 20px;
+    font-weight: 600;
+    color: #333;
+    border-bottom: 1px solid #f0f0f0;
+    cursor: default;
+    background-color: #fafafa;
+    border-radius: 8px 8px 0 0;
+}
+
+/* Icon spacing inside the profile menu */
+.profile-dropdown li a i {
+    width: 25px;   /* Fixed width for alignment */
+    color: #555;
+    margin-right: 5px;
+}
+/* --- PROFILE PAGE STYLES --- */
+
+.profile-details {
+    background: white;
+    /* Removed padding/border to keep it clean like the screenshot, 
+       but you can add padding: 20px; if you want a box look */
+}
+
+.detail-row {
+    display: flex;
+    padding: 15px 0;
+    /* Optional: Add a subtle line between rows */
+    /* border-bottom: 1px solid #f9f9f9; */
+}
+
+.detail-label {
+    width: 250px; /* Fixed width for the left column (labels) */
+    color: #666;
+    font-size: 14px;
+    font-weight: 400;
+}
+
+.detail-value {
+    color: #333;
+    font-weight: 500;
+    font-size: 14px;
+    flex: 1; /* Takes up remaining space */
+}
+/* --- ENROLLED COURSES TABS STYLES --- */
+
+.tabs-header h3 {
+    font-size: 1.2rem;
+    color: #333;
+    margin-bottom: 20px;
+    font-weight: 500;
+}
+
+/* The Tab Buttons Container */
+.tabs-nav {
+    display: flex;
+    gap: 30px;
+    border-bottom: 1px solid #e0e0e0;
+    margin-bottom: 30px;
+}
+
+.tab-btn {
+    background: none;
+    border: none;
+    padding: 10px 5px;
+    font-size: 15px;
+    color: #666;
+    cursor: pointer;
+    position: relative;
+    font-weight: 500;
+}
+
+/* Active Tab Style (Blue text + Blue underline) */
+.tab-btn.active {
+    color: #3b82f6; /* Brainspot Blue */
+}
+
+.tab-btn.active::after {
+    content: '';
+    position: absolute;
+    bottom: -1px; /* Sits right on the border line */
+    left: 0;
+    width: 100%;
+    height: 2px;
+    background-color: #3b82f6;
+}
+
+/* Empty State Styling */
+.empty-state {
+    text-align: center;
+    padding: 50px 0;
+}
+
+.empty-state img {
+    width: 500px; /* Adjust size to match screenshot */
+    opacity: 0.9;
+    margin-bottom: 20px;
+}
+
+.empty-state p {
+    color: #666;
+    font-size: 14px;
+}
+/* --- QUIZ ATTEMPTS PAGE STYLES --- */
+
+.page-title {
+    font-size: 1.2rem;
+    color: #333;
+    margin-bottom: 25px;
+    font-weight: 500;
+}
+
+/* The Bordered Container */
+.quiz-empty-box {
+    background: white;
+    border: 1px solid #e2e8f0; /* Light grey border */
+    border-radius: 8px;
+    height: 400px; /* Fixed height to match screenshot */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.02);
+}
+
+.empty-content-centered {
+    text-align: center;
+}
+
+.empty-content-centered img {
+    width: 200px; /* Icon size */
+    margin-bottom: 20px;
+    opacity: 0.7;
+}
+
+.empty-content-centered p {
+    font-weight: 600; /* Bold text */
+    color: #1e293b;   /* Dark text */
+    font-size: 15px;
+}
+/* --- ORDER HISTORY STYLES --- */
+
+/* Container for buttons and date picker */
+.filter-controls {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 40px;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.filter-buttons {
+    display: flex;
+    gap: 15px;
+}
+
+/* Specific style for the outline buttons (Today, Monthly, Yearly) */
+.filter-btn-outline {
+    background: transparent;
+    border: 1px solid #3b82f6; /* Blue border */
+    color: #3b82f6; /* Blue text */
+    padding: 8px 25px;
+    border-radius: 5px;
+    font-size: 14px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.filter-btn-outline:hover,
+.filter-btn-outline.active {
+    background: #3b82f6; /* Blue fill on hover/active */
+    color: white;
+}
+
+/* Date Picker Style */
+.date-input {
+    padding: 8px 15px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    color: #777;
+    font-family: inherit;
+    min-width: 250px;
+}
+
+/* --- QUESTION & ANSWER PAGE STYLES --- */
+
+.qa-filter {
+    margin-bottom: 20px;
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    font-size: 14px;
+    color: #555;
+}
+
+.qa-dropdown {
+    padding: 8px 15px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    background: white;
+    min-width: 150px;
+    outline: none;
+    color: #333;
+    font-family: inherit;
+    cursor: pointer;
+}
+
+.qa-dropdown:focus {
+    border-color: #3b82f6; /* Blue border on click */
+}
+/* --- SETTINGS PAGE STYLES --- */
+
+/* Cover Photo Area */
+.settings-cover-area {
+    position: relative;
+    margin-bottom: 60px; /* Space for profile pic to hang out */
+}
+
+.cover-photo {
+    height: 180px;
+    background: linear-gradient(to right, #2d1b4e, #4c1d95); /* Purple gradient */
+    border-radius: 10px;
+    position: relative;
+    background-image: url('imgs/cover-pattern.png'); /* Optional pattern if you have one */
+}
+
+
+
+/* --- NEW COVER PHOTO BUTTON STYLES --- */
+
+/* Container to hold both buttons side-by-side */
+.cover-actions {
+    position: absolute;
+    bottom: 15px;
+    right: 15px;
+    display: flex;
+    gap: 10px; /* Space between the buttons */
+}
+
+/* Shared style for both cover buttons */
+.btn-action {
+    background: rgba(255, 255, 255, 0.2);
+    border: 1px solid rgba(255, 255, 255, 0.5);
+    color: white;
+    padding: 8px 12px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 13px;
+    backdrop-filter: blur(5px);
+    transition: all 0.2s ease;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px; /* Space between icon and text */
+}
+
+/* Hover effect for Upload button */
+.btn-upload:hover {
+    background: rgba(255, 255, 255, 0.35);
+}
+
+/* Specific style for Delete button (Red on hover) */
+.btn-delete {
+    padding: 8px 10px; /* Slightly smaller padding for just an icon */
+}
+
+.btn-delete:hover {
+    background: rgba(220, 38, 38, 0.8); /* Red background */
+    border-color: rgba(220, 38, 38, 1);
+}
+
+
+/* Profile Photo Overlay */
+.profile-photo-edit {
+    position: absolute;
+    bottom: -40px; /* Hangs half out */
+    left: 40px;
+    width: 100px;
+    height: 100px;
+}
+
+.circle-placeholder {
+    width: 100%;
+    height: 100%;
+    background: #ccc;
+    border-radius: 50%;
+    border: 4px solid white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 40px;
+    color: white;
+    background-color: #b0b0b0;
+}
+
+.btn-camera-small {
+    position: absolute;
+    bottom: 5px;
+    right: 0;
+    background: #8b5cf6;
+    color: white;
+    border: 2px solid white;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 12px;
+}
+
+.info-text {
+    text-align: right;
+    color: #999;
+    font-size: 12px;
+    margin-bottom: 20px;
+}
+
+/* Form Layout */
+.settings-form {
+    max-width: 100%;
+}
+
+.form-row {
+    display: flex;
+    gap: 30px;
+}
+
+.form-row .form-group {
+    flex: 1; /* Equal width columns */
+}
+
+.input-field.readonly {
+    background-color: #e2e8f0; /* Grey background for readonly */
+    cursor: not-allowed;
+}
+
+/* Rich Text Editor Simulation */
+.rich-text-editor {
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    overflow: hidden;
+}
+
+.rich-text-editor .toolbar {
+    background: #f8fafc;
+    padding: 10px;
+    border-bottom: 1px solid #ddd;
+    display: flex;
+    gap: 15px;
+    color: #666;
+}
+
+.rich-text-editor textarea {
+    width: 100%;
+    border: none;
+    padding: 15px;
+    outline: none;
+    resize: vertical;
+    font-family: inherit;
+}
+
+/* Update Button */
+.btn-update {
+    background-color: #3b82f6;
+    color: white;
+    padding: 12px 25px;
+    border: none;
+    border-radius: 5px;
+    font-weight: 500;
+    cursor: pointer;
+    margin-top: 20px;
+}
+
+.btn-update:hover { background-color: #2563eb; }
+
+/* Social Profile Tab */
+.social-label {
+    margin-bottom: 20px;
+    font-weight: 500;
+    color: #333;
+}
+
+.social-row {
+    display: flex;
+    align-items: center;
+    margin-bottom: 15px;
+}
+
+.social-icon {
+    width: 150px; /* Fixed width for labels */
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    color: #333;
+    font-size: 14px;
+    font-weight: 500;
+}
+
+.social-row .input-field {
+    flex: 1;
+    margin-bottom: 0;
+}
+/* Add to the bottom of style.css */
+
+/* Helper text below form inputs */
+.form-helper-text {
+    display: block; /* Makes it sit on its own line below the input */
+    margin-top: 8px; /* Space between dropdown and text */
+    font-size: 13px;
+    color: #777; /* Medium grey color */
+    line-height: 1.5; /* Improves readability for multi-line text */
+}
+
+
+/* --- NOTES PAGE STYLES --- */
+
+.notes-grid-section {
+    padding: 60px 5%;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(350px, 1fr)); /* Responsive grid */
+    gap: 30px;
+    background-color: white;
+}
+
+/* The Yellow Card Design */
+.note-card {
+    background-color: #ebc76b; /* Gold/Yellow color */
+    border-radius: 0; /* Sharp corners based on image, or add radius if preferred */
+    display: flex;
+    justify-content: space-between;
+    padding: 20px;
+    position: relative;
+    overflow: hidden; /* Hides decorative circles that stick out */
+    height: 200px;
+    transition: transform 0.3s;
+    cursor: pointer;
+}
+
+.note-card:hover {
+    transform: translateY(-5px); /* Slight lift on hover */
+    box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+}
+
+/* Left side of card (Text) */
+.card-left {
+    z-index: 2;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.brand-tag {
+    font-size: 10px;
+    font-weight: 700;
+    color: #333;
+    margin-bottom: 10px;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+.note-card h3 {
+    font-size: 1.5rem;
+    line-height: 1.2;
+    color: #111;
+    margin-bottom: 15px;
+    font-weight: 800;
+    text-transform: uppercase;
+}
+
+.presenter {
+    font-size: 10px;
+    color: #444;
+    font-weight: 500;
+}
+
+/* Right side (Circle Logo) */
+.card-right {
+    z-index: 2;
+    display: flex;
+    align-items: center;
+}
+
+.circle-bg {
+    width: 90px;
+    height: 900px;
+    background: white;
+    border-radius: 50%;
+    border: 4px solid #dcb248; /* Darker gold border */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 0 0 5px white; /* Double ring effect */
+}
+
+.circle-bg img {
+    width: 110px;
+    height: auto;
+}
+
+/* Decorative Circles (Background patterns) */
+.deco-circle {
+    position: absolute;
+    background-color: #dcb248; /* Darker gold shade */
+    border-radius: 50%;
+    z-index: 1;
+}
+
+.deco-circle.top-left {
+    width: 40px;
+    height: 40px;
+    top: -10px;
+    left: 40%;
+}
+
+.deco-circle.bottom-right {
+    width: 60px;
+    height: 60px;
+    bottom: -20px;
+    left: -20px;
+}
+
+/* --- ENGINEERING MATHS PAGE STYLES --- */
+
+.notes-list-section {
+    padding: 40px 10%;
+    min-height: 60vh;
+}
+
+/* Folder Title */
+.folder-title {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    font-size: 1.8rem;
+    color: #111;
+    margin-bottom: 30px;
+    font-weight: 500;
+}
+
+.folder-title i {
+    color: #3b82f6; /* Blue folder icon */
+}
+
+/* Search Box */
+.search-box {
+    position: relative;
+    max-width: 400px;
+    margin-bottom: 50px;
+}
+
+.search-box input {
+    width: 100%;
+    padding: 12px 15px 12px 45px; /* Padding left for icon */
+    border: none;
+    background-color: #f8fafc;
+    border-radius: 5px;
+    font-size: 14px;
+    outline: none;
+}
+
+.search-box i {
+    position: absolute;
+    left: 15px;
+    top: 50%;
+    transform: translateY(-50%);
+    color: #999;
+}
+
+/* PDF Grid Layout */
+.pdf-grid {
+    display: flex;
+    gap: 30px;
+    flex-wrap: wrap;
+}
+
+/* PDF Card Style */
+.pdf-card {
+    background: white;
+    border: 1px solid #eef2ff;
+    border-radius: 12px;
+    padding: 30px 20px;
+    width: 250px;
+    text-align: center;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.03);
+    transition: 0.3s;
+}
+
+.pdf-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 25px rgba(0,0,0,0.08);
+}
+
+.pdf-icon {
+    position: relative;
+    display: inline-block;
+    color: #ef4444; /* Red color for PDF */
+    font-size: 40px;
+    margin-bottom: 20px;
+}
+
+.pdf-label {
+    position: absolute;
+    bottom: -5px;
+    left: 50%;
+    transform: translateX(-50%);
+    background: #ef4444;
+    color: white;
+    font-size: 8px;
+    padding: 2px 4px;
+    border-radius: 2px;
+    font-weight: 700;
+}
+
+.pdf-card h3 {
+    font-size: 14px;
+    font-weight: 500;
+    color: #333;
+    margin-bottom: 25px;
+    min-height: 40px; /* Aligns buttons even if titles are different lengths */
+}
+
+/* Download Button */
+.btn-download {
+    border: 1px solid #ccc;
+    background: white;
+    color: #555;
+    padding: 8px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 13px;
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    transition: 0.2s;
+}
+
+.btn-download:hover {
+    border-color: #3b82f6;
+    color: #3b82f6;
+}
+/* --- E-BOOK / ZIP FILE STYLES --- */
+
+/* Change icon color to Orange/Yellow */
+.zip-icon {
+    color: #f59e0b; /* Orange-Yellow color */
+}
+
+/* Change label background to match */
+.zip-label {
+    background-color: #f59e0b;
+}
+
+/* Optional: Make the icon slightly lighter grey if you prefer the exact screenshot look */
+.zip-icon i {
+    color: #cbd5e1; /* Light grey for the file icon itself */
+}
+
+/* =========================================
+   SCOPED COURSE PAGE STYLES
+   (These only affect the Courses Page)
+   ========================================= */
+
+/* 1. Header Styles */
+.courses-header h1 {
+    font-size: 3rem;
+    margin-top: 10px;
+}
+
+.courses-header .sub-heading {
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    font-size: 14px;
+    opacity: 0.9;
+}
+
+/* 2. Main Container */
+.all-courses-page {
+    padding: 60px 8%;
+    background-color: #f8fafc;
+}
+
+/* 3. Grid Layout (3 Columns) */
+.all-courses-page .course-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 30px;
+    /* Resetting any flex properties from Home Page */
+    justify-content: initial; 
+}
+
+/* 4. Card Styling */
+.all-courses-page .course-card {
+    /* Force these to behave like normal boxes, ignoring Home Page rules */
+    display: block !important;       
+    width: 100% !important;          
+    background: white;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+    border: 1px solid #eee;
+    transition: transform 0.3s ease;
+}
+
+.all-courses-page .course-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+}
+
+/* 5. Image Thumbnail */
+.all-courses-page .course-thumb {
+    height: 180px !important;
+    width: 100% !important;
+    display: block !important;
+    background-color: #eee;
+}
+
+.all-courses-page .course-thumb img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* 6. Card Body */
+.all-courses-page .course-body {
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    min-height: 180px;
+    justify-content: space-between;
+}
+
+/* 7. Rating Stars */
+.all-courses-page .course-rating {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 10px;
+    font-size: 14px;
+}
+
+.all-courses-page .stars {
+    color: #f59e0b; /* Yellow/Orange Stars */
+    font-size: 14px;
+}
+
+.all-courses-page .rating-num {
+    color: #666;
+    font-weight: 500;
+}
+
+/* 8. Course Title */
+.all-courses-page .course-title {
+    font-size: 18px;
+    font-weight: 600;
+    color: #222;
+    /* Reset margins that might be affecting it from Home Page */
+    margin: 10px 0 20px 0 !important; 
+    min-height: auto !important;
+}
+
+/* 9. Enroll Button */
+.all-courses-page .btn-enroll {
+    width: 100%;
+    padding: 10px;
+    background: transparent;
+    border: 1px solid #3b82f6; /* Blue Border */
+    color: #3b82f6;            /* Blue Text */
+    border-radius: 5px;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.3s;
+}
+
+.all-courses-page .btn-enroll:hover {
+    background: #3b82f6;
+    color: white;
+}
+
+
+

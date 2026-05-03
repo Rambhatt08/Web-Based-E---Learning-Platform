@@ -1,0 +1,12 @@
+.env
+/vendor/
+/node_modules/
+.idea/
+.vscode/
+*.log
+uploads/videos/
+*.mp4
+*.avi
+*.mov*.mp4
+uploads/videos/
+*.mp4

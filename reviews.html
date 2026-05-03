@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Reviews - Smart Learn</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" href="imgs/favicon.png" type="image/png">
+</head>
+<body>
+
+    <nav class="navbar dashboard-nav">
+        <div class="logo">
+            <a href="index.html"><img src="imgs/logo.jpg" alt="Smart learn Logo"></a>
+        </div>
+        
+        <ul class="nav-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="courses.html">Course</a></li>
+            
+            <li class="dropdown-parent">
+                <a href="#">Notes <i class="fas fa-chevron-down"></i></a>
+                <ul class="dropdown-menu">
+                    <li class="dropdown-sub-parent">
+                        <a href="#">Information Technology <i class="fas fa-chevron-right arrow-right"></i></a>
+                        <ul class="submenu">
+                            <li><a href="#">1st Year</a></li>
+                            <li><a href="#">2nd Year</a></li>
+                            <li><a href="#">3rd Year</a></li>
+                            <li><a href="#">4th Year</a></li>
+                        </ul>
+                    </li>
+                    <li class="dropdown-sub-parent">
+                        <a href="#">Computer Engineering <i class="fas fa-chevron-right arrow-right"></i></a>
+                        <ul class="submenu">
+                            <li><a href="computer-eng-1st-year.html">1st Year</a></li>
+                            <li><a href="computer-eng-2nd-year.html">2nd Year</a></li>
+                            <li><a href="computer-eng-3rd-year.html">3rd Year</a></li>
+                            <li><a href="computer-eng-4th-year.html">4th Year</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </li>
+
+            <li class="dropdown-parent">
+                <a href="#">E-Book <i class="fas fa-chevron-down"></i></a>
+                <ul class="dropdown-menu">
+                    <li><a href="ebook-1st-year.html">1st Year E-Book</a></li>
+                    <li><a href="ebook-2nd-year.html">2nd Year E-Book</a></li>
+                    <li><a href="ebook-3rd-year.html">3rd Year E-Book</a></li>
+                    <li><a href="ebook-4th-year.html">4th Year E-Books</a></li>
+                </ul>
+            </li>
+
+            <li><a href="about.html">About US</a></li>
+            <li><a href="contact.html">Contact Us</a></li>
+            <li><a href="student-dashboard.html" class="active">Dashboard</a></li>
+        </ul>
+        
+        <div class="user-profile dropdown-parent">
+            <div class="profile-trigger">
+                <div class="avatar-circle">DL</div>
+                <span>Demo login <i class="fas fa-chevron-down"></i></span>
+            </div>
+            <ul class="dropdown-menu profile-dropdown">
+                <li class="profile-name-header">Demo login</li>
+                <li><a href="student-dashboard.html"><i class="fas fa-tachometer-alt"></i> Dashboard</a></li>
+                <li><a href="profile.html"><i class="fas fa-user"></i> My profile</a></li>
+                <li><a href="settings.html"><i class="fas fa-cog"></i> Account Settings</a></li>
+                <li><a href="index.html"><i class="fas fa-sign-out-alt"></i> Logout</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <header class="dash-header">
+        <div class="big-avatar">DL</div>
+        <div class="welcome-text">
+            <span>Hello,</span>
+            <h2>Demo Login</h2>
+        </div>
+    </header>
+
+    <div class="dashboard-container">
+        
+        <aside class="sidebar">
+            <ul>
+                <li><a href="student-dashboard.html"><i class="fas fa-tachometer-alt"></i> Dashboard</a></li>
+                <li><a href="profile.html"><i class="fas fa-user"></i> My Profile</a></li>
+                <li><a href="enrolled-courses.html"><i class="fas fa-graduation-cap"></i> Enrolled Courses</a></li>
+                <li><a href="reviews.html" class="active"><i class="fas fa-star"></i> Reviews</a></li>
+                <li><a href="quiz-attempts.html"><i class="fas fa-chart-bar"></i> My Quiz Attempts</a></li>
+                <li><a href="wishlist.html"><i class="fas fa-bookmark"></i> Wishlist</a></li>
+                <li><a href="order-history.html"><i class="fas fa-shopping-cart"></i> Order History</a></li>
+                <li><a href="question-answer.html"><i class="fas fa-question-circle"></i> Question & Answer</a></li>
+                <li><a href="settings.html"><i class="fas fa-cog"></i> Settings</a></li>
+                <li><a href="index.html"><i class="fas fa-sign-out-alt"></i> Logout</a></li>
+            </ul>
+        </aside>
+
+        <main class="dash-content">
+            <div class="tabs-header">
+                <h3>Reviews</h3>
+            </div>
+
+            <div class="empty-state">
+                <img src="imgs/empty-mailbox.png" alt="No Data">
+                <p>No Data Available in this Section</p>
+            </div>
+        </main>
+    </div>
+
+    <footer class="footer">
+        <div class="footer-col">
+            <img src="imgs/1.png" alt="Smart Learn" class="footer-logo">
+            <p class="slogan">Learning often happens in<br> classrooms <br> but it doesn't have to.</p>
+        </div>
+        <div class="footer-col">
+            <h4>Popular Contain</h4>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="courses.html">Course</a></li>
+                <li><a href="student-dashboard.html">Dashboard</a></li>
+                <li><a href="contact.html">Contact Us</a></li>
+                <li><a href="about.html">About Us</a></li>
+            </ul>
+        </div>
+        <div class="footer-col">
+            <h4>Contact Info</h4>
+            <p>0123456789</p>
+            <p>smartlearnhelp@gamil.com</p>
+        </div>
+    </footer>
+
+</body>
+</html>
