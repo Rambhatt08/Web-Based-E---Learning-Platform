@@ -98,12 +98,15 @@ Secret Key: Teacher2026
 
 ### Quiz Page
 ![Quiz](screenshots/quizpagee.png)
+<img width="1401" height="663" alt="quizpage" src="https://github.com/user-attachments/assets/6013fc55-41a6-4580-827a-9e5b9a857c67" />
 
 ### Quiz Module Page
 ![Quiz](screenshots/quizmodulee.png)
+<img width="1347" height="671" alt="quizmodule" src="https://github.com/user-attachments/assets/552e3f2e-11a6-4f0b-8720-fe5297dc6fab" />
 
 ### Quiz Result Page
 ![Quiz](screenshots/quizresultt.png) 
+<img width="1141" height="718" alt="quizresult" src="https://github.com/user-attachments/assets/fd595b08-682e-445a-9e57-aebb34a960cf" />
 
 ### Admin Dashboard Page
 ![Dashboard](screenshots/admindashboard.png)
