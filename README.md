@@ -97,13 +97,13 @@ Secret Key: Teacher2026
 ![Dashboard](screenshots/studentdashboard.png)
 
 ### Quiz Page
-![Quiz](screenshots/quizpage.png)
+![Quiz](screenshots/quizpagee.png)
 
 ### Quiz Module Page
-![Quiz](screenshots/quizmodule.png)
+![Quiz](screenshots/quizmodulee.png)
 
 ### Quiz Result Page
-![Quiz](screenshots/quizresult.png) 
+![Quiz](screenshots/quizresultt.png) 
 
 ### Admin Dashboard Page
 ![Dashboard](screenshots/admindashboard.png)
